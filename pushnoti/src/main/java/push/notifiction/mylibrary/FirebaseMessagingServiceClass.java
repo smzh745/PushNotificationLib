@@ -108,9 +108,9 @@ public class FirebaseMessagingServiceClass extends FirebaseMessagingService {
 
     private void sendNotificationMsg(String body, String action) {
         try {
-            Intent intent = new Intent(action);
+/*            Intent intent = new Intent(action);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);*/
             NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
             int notifyID = 1;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -128,8 +128,8 @@ public class FirebaseMessagingServiceClass extends FirebaseMessagingService {
                         .setContentText(body)
                         /* .setDefaults(Notification.DEFAULT_SOUND)*/
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
-                        .setAutoCancel(true)
-                        .setContentIntent(pendingIntent);
+                        .setAutoCancel(true);
+//                        .setContentIntent(pendingIntent);
 
                 notificationManager.notify(notifyID, mBuilder.build());
 
@@ -140,9 +140,9 @@ public class FirebaseMessagingServiceClass extends FirebaseMessagingService {
                         .setSmallIcon(R.drawable.ic_launcher)
                         /*         .setContentTitle(getString(R.string.app_name))*/
                         .setContentText(body)
-                        .setPriority(NotificationCompat.PRIORITY_HIGH)
+                        .setPriority(NotificationCompat.PRIORITY_HIGH);
                         /*  .setDefaults(Notification.DEFAULT_SOUND)*/
-                        .setAutoCancel(true).setContentIntent(pendingIntent);
+//                        .setAutoCancel(true).setContentIntent(pendingIntent);
 
 
                 NotificationManager mNotificationManager =
