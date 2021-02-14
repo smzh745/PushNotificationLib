@@ -123,14 +123,14 @@ public class ExtraUtils {
                                     e.printStackTrace();
                                 }
                             } else {
-                                if (!GetAllNotificationValues.getisToken(context).equalsIgnoreCase(token)) {
+//                                if (!GetAllNotificationValues.getisToken(context).equalsIgnoreCase(token)) {
                                     // Token updated at server if change..
                                     try {
                                         NetworkCalling(context, token, macAddress);
                                     } catch (Exception e) {
                                         e.printStackTrace();
                                     }
-                                }
+//                                }
                             }
                         });
             }
