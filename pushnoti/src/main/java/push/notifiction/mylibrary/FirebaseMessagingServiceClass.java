@@ -123,7 +123,7 @@ public class FirebaseMessagingServiceClass extends FirebaseMessagingService {
                 notificationManager.createNotificationChannel(mChannel);
 
                 NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID)
-                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setSmallIcon(R.drawable.ic_baseline_notifications_active_24)
                         /*          .setContentTitle(getString(R.string.app_name))*/
                         .setContentText(body)
                         /* .setDefaults(Notification.DEFAULT_SOUND)*/
@@ -137,7 +137,7 @@ public class FirebaseMessagingServiceClass extends FirebaseMessagingService {
 //Get an instance of NotificationManager//
 
                 NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext())
-                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setSmallIcon(R.drawable.ic_baseline_notifications_active_24)
                         /*         .setContentTitle(getString(R.string.app_name))*/
                         .setContentText(body)
                         .setPriority(NotificationCompat.PRIORITY_HIGH);
