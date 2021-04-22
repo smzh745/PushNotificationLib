@@ -17,6 +17,26 @@ android {
     }
 
     buildTypes {
+      /*  release {
+            minifyEnabled true
+            debuggable false
+            zipAlignEnabled false
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+             debug {
+          minifyEnabled true
+          debuggable false
+          zipAlignEnabled false
+          // Enables resource shrinking, which is performed by the
+          // Android Gradle plugin.
+          shrinkResources true
+
+          proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      }*/
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

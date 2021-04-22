@@ -10,8 +10,11 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.Request;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -114,7 +117,7 @@ public class ExtraUtils {
                             // Get new Instance ID token
                             final String token = Objects.requireNonNull(task.getResult()).getToken();
                             Log.d("Test", token);
-
+//                            Toast.makeText(context, token, Toast.LENGTH_SHORT).show();
                             if (GetAllNotificationValues.getisToken(context).equalsIgnoreCase("")) {
                                 // Save token at server..
                                 try {
@@ -171,9 +174,26 @@ public class ExtraUtils {
                 return params;
             }
         };
+        stringRequest.setRetryPolicy(new RetryPolicy() {
+            @Override
+            public int getCurrentTimeout() {
+                return 50000;
+            }
+
+            @Override
+            public int getCurrentRetryCount() {
+                return 50000;
+            }
+
+            @Override
+            public void retry(VolleyError error) throws VolleyError {
+                Log.d("Test", "retry: "+error.getMessage());
+            }
+        });
         if (!token.isEmpty()) {
             RequestHandler.getInstance(context).addToRequestQueue(stringRequest);
         }
+
     }
 
     public static String getMacAddress() {

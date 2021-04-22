@@ -149,6 +149,35 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806011100985:android:a4fd888c4d2cf8e66292e8",
+        "android_client_info": {
+          "package_name": "zee.documents.reader.ofline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806011100985-ataj0eccnep9fa8curns7ls6fhhfg4ba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnSInf3znbrdX2NkoqVEdtnEbI6qBvwLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806011100985-ataj0eccnep9fa8curns7ls6fhhfg4ba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
