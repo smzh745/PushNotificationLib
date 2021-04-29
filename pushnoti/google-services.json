@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:806011100985:android:549d78e317a6844a6292e8",
+        "android_client_info": {
+          "package_name": "com.studioventure.background.recorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "806011100985-ataj0eccnep9fa8curns7ls6fhhfg4ba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnSInf3znbrdX2NkoqVEdtnEbI6qBvwLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "806011100985-ataj0eccnep9fa8curns7ls6fhhfg4ba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:806011100985:android:a445ac96814705a96292e8",
         "android_client_info": {
           "package_name": "come.pushnotificationlib"
